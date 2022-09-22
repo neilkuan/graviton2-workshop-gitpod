@@ -13,6 +13,6 @@ RUN apt-get update && apt-get install -y jq wget && mv $(which aws) /usr/local/b
 RUN npm install aws-cdk -g && \
   curl --silent --location -o /usr/local/bin/kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.17.11/2020-09-18/bin/linux/amd64/kubectl && \
   chmod +x /usr/local/bin/kubectl && \
-  kubectl completion bash >>  /home/gitpod/.bash_completion
+  kubectl completion bash > /home/gitpod/.bash_completion
 
 USER superchain:superchain
